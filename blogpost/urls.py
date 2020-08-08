@@ -1,6 +1,20 @@
-from django.contrib import admin
 from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+
+from .views import (
+   BlogPostListAPIView,
+   BlogPostDetailAPIView,
+   #BlogPostDeleteAPIView,
+   #BlogPostUpdateAPIView,
+   BlogPostCreateAPIView,
+)
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+   path('',BlogPostListAPIView.as_view()),
+   path('create/',BlogPostCreateAPIView.as_view()),
+   path('<int:pk>',BlogPostDetailAPIView.as_view(), name = 'detailAPI'),
+   #path('<int:pk>/update',BlogPostUpdateAPIView.as_view()),
+   #path('<int:pk>/delete',BlogPostDeleteAPIView.as_view()),
 ]
