@@ -17,7 +17,6 @@ from .serializers import (
     BlogPostListSerializer,
     BlogPostDetailSerializer,
 )
-
 #List of all Blog post
 class BlogPostListAPIView(ListAPIView):
     queryset = BlogPost.objects.all().order_by('-id')

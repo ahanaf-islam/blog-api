@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     #Local Apps
     'accounts.apps.AccountsConfig',
     'blogpost.apps.BlogpostConfig',
+    'comments.apps.CommentsConfig',
 
     #Third-Party Apps
     'rest_framework',
@@ -86,7 +87,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blogApiDB',
+        'NAME': 'blogApiSlag',
         'USER': 'postgres',
         'PASSWORD': 'Ahanaf12345',
         'HOST': 'localhost',
